@@ -8,11 +8,13 @@
 </head>
 
 <script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
 
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    burger.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    });
   });
 </script>
 
@@ -22,7 +24,7 @@
   <button class="burger" aria-label="Menu">&#9776;</button>
 
   <nav class="nav-links">
-    <a href="home.html">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="Projet.html">Portfolio</a>
     <a href="#">À propos</a>
     <a href="#">Contact</a>
