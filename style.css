@@ -4,13 +4,12 @@ body {
 }
 
 header {
-  background-color: #f0f0f0;
+  background-color: #f9e7ec; /* rose très pâle */
   padding: 20px 30px;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #d9a3b3; /* rose moyen */
   font-size: 24px;
-  position: relative;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -19,7 +18,7 @@ header {
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #000;
+  color: #6b495a; /* prune doux */
   font-weight: bold;
 }
 
@@ -30,7 +29,13 @@ nav a {
   flex-direction: column;
   justify-content: center;
   background-color: #f8f9fa;
-  padding: 20px;
+
+  background-image: url('image/dsqOT0oBF-XEnc4Pqdhb-ijEzfrbkgs4xFX-hu-8KaQ.png');
+  background-size: cover;       
+  background-position: center;   
+  background-repeat: no-repeat;  
+  color: #fdf6f9; /* blanc rosé */
+  text-shadow: 0 0 5px rgba(107, 73, 90, 0.7);
 }
 
 .etudiant h1 {
@@ -46,14 +51,14 @@ nav a {
 .section-container {
   display: flex;
   justify-content: center;
-  background-color: #cfd8dc;
+  background-color: #e9d6db; /* rose pastel clair */
   padding: 100px 20px;
   gap: 50px;
   flex-wrap: wrap;
 }
 
 .card {
-  background-color: #e0e0e0;
+  background-color: #f7e9ec; /* rose très clair */
   max-width: 90vw;
   width: 400px;
   padding: 60px;
@@ -61,6 +66,7 @@ nav a {
   text-align: center;
   transition: transform 0.3s ease;
   cursor: pointer;
+  color: #6b495a; /* prune doux */
 }
 
 .zoom-hover:hover {
@@ -71,13 +77,13 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #cfd8dc;
+  background-color: #e9d6db; /* rose pastel clair */
   padding: 80px 20px;
   gap: 100px;
 }
 
 .projets {
-  background-color: #e0e0e0;
+  background-color: #f7e9ec; /* rose très clair */
   max-width: 350px;
   padding: 80px;
   border-radius: 8px;
@@ -85,6 +91,7 @@ nav a {
   transition: transform 0.3s ease;
   cursor: pointer;
   box-sizing: border-box;
+  color: #6b495a; /* prune doux */
 }
 
 .card-link {
@@ -94,19 +101,19 @@ nav a {
 }
 
 .footer {
-  background-color: #e1bee7;
+  background-color: #d4c1c6; /* rose gris doux */
   padding: 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   font-size: 14px;
+  color: #6b495a; /* prune doux */
 }
 
-
 .footer a {
-  background-color: white;
-  color: black;
+  background-color: #fdf6f9; /* blanc rosé */
+  color: #6b495a; /* prune doux */
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 25px;
@@ -114,7 +121,6 @@ nav a {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-
 
 /* --- NAVIGATION --- */
 
@@ -143,10 +149,10 @@ nav a {
     position: absolute;
     top: 70px;
     left: 20px;
-    background-color: #f0f0f0;
+    background-color: #f9e7ec; /* rose très pâle */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(107, 73, 90, 0.1);
     z-index: 1000;
   }
 
@@ -176,10 +182,10 @@ nav a {
     top: 70px;
     left: 20px;
     right: 20px;
-    background-color: #f0f0f0;
+    background-color: #f9e7ec; /* rose très pâle */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(107, 73, 90, 0.1);
     z-index: 1000;
   }
 
@@ -211,11 +217,12 @@ nav a {
 /* --- STYLE POUR LA PAGE DU PROJET --- */
 
 .projet-container {
-  background-color: #cfd8dc;
+  background-color: #e9d6db; /* rose pastel clair */
   padding: 40px 20px;
   max-width: auto;
   margin: auto;
   font-family: Arial, sans-serif;
+  color: #6b495a; /* prune doux */
 }
 
 .projet-header {
@@ -228,14 +235,14 @@ nav a {
 .projet-image {
   width: 100px;
   height: 100px;
-  background-color: #e0e0e0;
+  background-color: #f7e9ec; /* rose très clair */
   object-fit: cover;
   border-radius: 8px;
 }
 
 .projet-titre {
   font-size: 2em;
-  color: #333;
+  color: #6b495a; /* prune doux */
   margin: 0;
 }
 
@@ -246,17 +253,16 @@ nav a {
 .projet-section h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: #6b495a; /* prune doux */
 }
 
 .projet-section p {
-  background-color: #e0e0e0;
+  background-color: #f7e9ec; /* rose très clair */
   padding: 15px;
   border-radius: 5px;
-  color: #333;
+  color: #6b495a; /* prune doux */
   line-height: 1.6;
 }
-
 
 /* --- ADAPTATION RESPONSIVE POUR MOBILE --- */
 
