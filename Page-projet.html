@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button class="burger" aria-label="Menu">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="projet.html">Portfolio</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="projet-container">
+    <section class="projet-header">
+      <img id="projet-image" src="" alt="Image du projet" class="projet-image" />
+      <h1 class="projet-titre" id="projet-titre">Chargement...</h1>
+    </section>
+
+    <section class="projet-section">
+      <h2>Description</h2>
+      <p id="description">Chargement...</p>
+    </section>
+
+    <section class="projet-section">
+      <h2>Compétences</h2>
+      <p id="competences">Chargement...</p>
+    </section>
+
+    <section class="projet-section">
+      <h2>Ce que j’ai fait</h2>
+      <p id="actions">Chargement...</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Mail : mathieu.macaud@protonmail.com</span>
+    <div class="footer-buttons">
+      <a href="#">LinkedIn</a>
+      <a href="#">Télécharger mon CV</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Gestion menu burger
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav-links');
+      burger.addEventListener('click', () => nav.classList.toggle('active'));
+
+      // Contenus des projets par ID
+      const projets = {
+        1: {
+          titre: "Projet 1 - Site Web",
+          image: "image-projet1.jpg",
+          description: "Voici une description détaillée du projet 1. Explication du contexte, objectifs et technologies.",
+          competences: "HTML, CSS, JavaScript",
+          actions: "Développement de l’interface utilisateur, intégration des maquettes."
+        },
+        2: {
+          titre: "Projet 2 - Application Mobile",
+          image: "image-projet2.jpg",
+          description: "Description du projet 2 avec ses particularités et objectifs.",
+          competences: "React Native, API REST, gestion d’état",
+          actions: "Création de l’application, tests et déploiement sur Android et iOS."
+        },
+        3: {
+          titre: "Projet 3 - API Backend",
+          image: "image-projet3.jpg",
+          description: "Ce projet consiste à développer une API backend sécurisée.",
+          competences: "Node.js, Express, MongoDB",
+          actions: "Création des endpoints, authentification, déploiement sur serveur."
+        }
+      };
+
+      // Récupérer l'ID depuis l'URL
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+
+      if (id && projets[id]) {
+        const projet = projets[id];
+        document.getElementById('projet-titre').textContent = projet.titre;
+        document.getElementById('projet-image').src = projet.image;
+        document.getElementById('projet-image').alt = projet.titre;
+        document.getElementById('description').textContent = projet.description;
+        document.getElementById('competences').textContent = projet.competences;
+        document.getElementById('actions').textContent = projet.actions;
+      } else {
+        document.getElementById('projet-titre').textContent = "Projet non trouvé";
+        document.getElementById('projet-image').style.display = 'none';
+        document.getElementById('description').textContent = "";
+        document.getElementById('competences').textContent = "";
+        document.getElementById('actions').textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>
