@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    });
+  });
+</script>
+
+<body>
+
+    <header>
+    <button class="burger" aria-label="Menu">&#9776;</button>
+
+    <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="Projet.html">Portfolio</a>
+        <a href="propos.html">À propos</a>
+        <a href="#footer">Contact</a>
+    </nav>
+    </header>
+
+    <h1 class="propos-title">MACAUD MATHIEU</h1>
+
+    <section class="section-container">
+        <img src="images/avatar-placeholder.png" alt="Photo de profil" class="profile-pic">
+        <div class="about-block">
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div><span class="dot"></span> DATE 1</div>
+            <div><span class="dot"></span> DATE 2</div>
+            <div><span class="dot"></span> DATE 3</div>
+            <div><span class="dot"></span> DATE 4</div>
+        </div>
+        
+    </section>
+
+
+
+    <h2>A propos</h2>
+
+    <img src="" alt="photo">
+
+    <p>dddddddddddddddddddddddddddddddddddddddd</p>
+
+
+
+</body>
+</html>
