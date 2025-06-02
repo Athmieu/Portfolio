@@ -229,6 +229,40 @@ nav a {
   margin-right: 90px;
 }
 
+.skills-simple {
+  background-color: #e9d6db; /* même rose pastel clair */
+  padding: 60px 20px;
+  text-align: center;
+  color: #6b495a;
+}
+
+.skills-simple h2 {
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.skills-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.skills-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skills-images img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
 
 /* --- NAVIGATION --- */
 
