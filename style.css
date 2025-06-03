@@ -231,7 +231,7 @@ nav a {
 
 .skills-simple {
   background-color: #e9d6db; /* même rose pastel clair */
-  padding: 60px 20px;
+  padding: 60px 60px;
   text-align: center;
   color: #6b495a;
 }
@@ -245,12 +245,12 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 80px;
 }
 
 .skills-images img {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
