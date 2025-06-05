@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+
+  </style>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const burger = document.querySelector('.burger');
@@ -12,100 +15,117 @@
       burger.addEventListener('click', function () {
         nav.classList.toggle('active');
       });
+
+      // Tabs logic
+      const buttons = document.querySelectorAll('.tab-menu li');
+      const contents = document.querySelectorAll('.tab-content');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(btn => btn.classList.remove('selected_btn'));
+          button.classList.add('selected_btn');
+
+          const target = button.getAttribute('data-target');
+          contents.forEach(c => {
+            c.classList.remove('active');
+            if (c.id === target) c.classList.add('active');
+          });
+        });
+      });
     });
   </script>
 </head>
 <body>
   <header>
     <button class="burger" aria-label="Menu">&#9776;</button>
-
     <nav class="nav-links">
       <a href="index.html">Accueil</a>
-      <a href="Projet.html">Portfolio</a>
+      <a href="Projet.html">Projets</a>
       <a href="propos.html">À propos</a>
-    <a href="#footer">Contact</a>
+      <a href="#footer">Contact</a>
     </nav>
   </header>
 
-    <main class="a-propos-section">
+  <main class="a-propos-section">
     <h1>MACAUD Mathieu</h1>
     <h2>À propos</h2>
+
     <div class="a-propos-content">
-        <div class="a-propos-image">
+      <div class="a-propos-image">
         <img src="image/portrait.jpg" alt="Portrait de Macaud Mathieu" />
+      </div>
+      <div class="a-propos-description">
+        <ul class="tab-menu">
+          <li class="selected_btn" data-target="tab-presentation">Présentation</li>
+          <li data-target="tab-langues">Langues</li>
+          <li data-target="tab-softskills">Soft skills</li>
+          <li data-target="tab-passions">Passions</li>
+        </ul>
+
+        <div id="tab-presentation" class="tab-content active">
+          <p>Étudiant en première année de BUT Informatique, passionné par le développement web et logiciel. Curieux, motivé et toujours prêt à apprendre de nouvelles technologies.</p>
         </div>
-        <div class="a-propos-description">
-        <p>Passionné par le développement web, je suis toujours en quête de nouveaux défis techniques et créatifs.</p>
-        <p>Avec une formation solide et une curiosité constante, je cherche à construire des projets qui ont du sens.</p>
-        <p>Découvre ci-dessous quelques dates clés de mon parcours.</p>
+        <div id="tab-langues" class="tab-content">
+          <img src="image/france.webp" alt="drapeau france">
+          <img src="image/angalis.png" alt="">
+          <p>Français : langue maternelle<br>Anglais : niveau intermédiaire (B2)</p>
         </div>
+        <div id="tab-softskills" class="tab-content">
+          <p>Autonomie, esprit d'équipe, rigueur, curiosité, gestion du temps.</p>
+        </div>
+        <div id="tab-passions" class="tab-content">
+          <p>Formule 1, football, jeux vidéo, MMA. Ces passions m'inspirent et m'apprennent la persévérance, l'analyse et le goût du challenge.</p>
+        </div>
+      </div>
     </div>
 
     <div class="timeline">
-        <div class="timeline-item">
-        <div class="circle"></div>
-        <span class="date1">DATE 1</span>
-        </div>
-
-        <div class="timeline-item">
-        <div class="circle"></div>
-        <span class="date2">DATE 2</span>
-        </div>
-
-        <div class="timeline-item">
-        <div class="circle"></div>
-        <span class="date3">DATE 3</span>
-        </div>
-
-        <div class="timeline-item">
-        <div class="circle"></div>
-        <span class="date4">DATE 4</span>
-        </div>
-
+      <div class="timeline-item"><div class="circle"></div><span class="date1">DATE 1</span></div>
+      <div class="timeline-item"><div class="circle"></div><span class="date2">DATE 2</span></div>
+      <div class="timeline-item"><div class="circle"></div><span class="date3">DATE 3</span></div>
+      <div class="timeline-item"><div class="circle"></div><span class="date4">DATE 4</span></div>
     </div>
 
-<section class="skills-categorized">
-  <h2>Compétences Techniques</h2>
+    <section class="skills-categorized">
+      <h2>Compétences Techniques</h2>
 
-  <div class="skills-category">
-    <h3>Langages</h3>
-    <div class="skills-images">
-      <img src="image/HTML5.png" alt="HTML" />
-      <img src="image/CSS2.png" alt="CSS" />
-      <img src="image/Java.webp" alt="Java" />
-      <img src="image/Java-FX.png" alt="JavaFX" />
-      <img src="image/Python-logo-notext.png" alt="Python" />
-      <img src="image/sql.png" alt="SQL" />
-      <img src="image/assembleur.png" alt="Assembleur" />
-      <img src="image/R-logo.png" alt="R" />
-    </div>
+      <div class="skills-category">
+        <h3>Langages</h3>
+        <div class="skills-images">
+          <img src="image/HTML5.png" alt="HTML" />
+          <img src="image/CSS2.png" alt="CSS" />
+          <img src="image/Java.webp" alt="Java" />
+          <img src="image/Java-FX.png" alt="JavaFX" />
+          <img src="image/Python-logo-notext.png" alt="Python" />
+          <img src="image/sql.png" alt="SQL" />
+          <img src="image/assembleur.png" alt="Assembleur" />
+          <img src="image/R-logo.png" alt="R" />
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Outils & Modélisation</h3>
+        <div class="skills-images">
+          <img src="image/GitHub-Logo.png" alt="GitHub" />
+          <img src="image/UML.png" alt="UML" />
+          <img src="image/drawIo.png" alt="Draw.io" />
+          <img src="image/word.webp" alt="Word" />
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Systèmes</h3>
+        <div class="skills-images">
+          <img src="image/debian-logo.png" alt="Debian" />
+          <img src="image/linux.png" alt="Linux" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer" id="footer">
+    <span>Mail : mathieu.macaud@protonmail.com</span>
+    <a href="#">LinkedIn</a>
+    <a href="#">Télécharger mon CV</a>
   </div>
-
-  <div class="skills-category">
-    <h3>Outils & Modélisation</h3>
-    <div class="skills-images">
-      <img src="image/GitHub-Logo.png" alt="GitHub" />
-      <img src="image/UML.png" alt="UML" />
-      <img src="image/drawIo.png" alt="Draw.io" />
-      <img src="image/word.webp" alt="Word" />
-    </div>
-  </div>
-
-  <div class="skills-category">
-    <h3>Systèmes</h3>
-    <div class="skills-images">
-      <img src="image/debian-logo.png" alt="Debian" />
-      <img src="image/linux.png" alt="Linux" />
-    </div>
-  </div>
-</section>
-    </main>
-  
-
-    <div class="footer" id="footer">
-      <span>Mail : mathieu.macaud@protonmail.com</span>
-      <a href="#">LinkedIn</a>
-      <a href="#">Télécharger mon CV</a>
-    </div>
 </body>
 </html>

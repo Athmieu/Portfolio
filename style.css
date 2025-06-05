@@ -82,16 +82,24 @@ nav a {
   gap: 100px;
 }
 
+.projets-containers p{
+  font-size: 20px;
+}
+
 .projets {
   background-color: #f7e9ec; /* rose très clair */
-  max-width: 350px;
-  padding: 80px;
+  width: 350px;
+  height: 250px;
+  padding: 20px;
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s ease;
   cursor: pointer;
   box-sizing: border-box;
   color: #6b495a; /* prune doux */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-link {
@@ -276,8 +284,45 @@ nav a {
   white-space: pre-line;
 }
 
-
-
+.tab-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.tab-menu li {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #eee;
+  transition: background-color 0.3s;
+}
+.tab-menu li.selected_btn {
+  background-color: #6b495a;
+  color: white;
+}
+.tab-content {
+  display: none;
+  margin-top: 10px;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content{
+  background-color: #f7e9ec;
+  padding: 10px;
+  border-radius: 8px;
+  
+}
+.tab-content img{
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 /* --- NAVIGATION --- */
 
