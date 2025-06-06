@@ -306,15 +306,32 @@ nav a {
   display: none;
   margin-top: 10px;
 }
+
 .tab-content.active {
   display: block;
 }
+
 .tab-content{
   background-color: #f7e9ec;
   padding: 10px;
   border-radius: 8px;
-  
 }
+
+#tab-langues.active{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+#tab-langues.active h3{
+  text-align: center;
+}
+
+#tab-langues.active p{
+  text-align: center;
+}
+
 .tab-content img{
   width: 150px;
   height: 100px;
