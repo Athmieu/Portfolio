@@ -13,7 +13,7 @@
       <a href="index.html">Accueil</a>
       <a href="Projet.html">Projets</a>
       <a href="propos.html">À propos</a>
-      <a href="#footer">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -45,7 +45,7 @@
   </main>
 
   <div class="footer" id="footer">
-    <span>Mail : mathieu.macaud@protonmail.com</span>
+    <a href="#">Me Contacter</a>
     <a href="#">LinkedIn</a>
     <a href="#">Télécharger mon CV</a>
   </div>
@@ -57,63 +57,63 @@
       burger.addEventListener('click', () => nav.classList.toggle('active'));
 
       const projets = {
-        1: {
-          titre: "Classification automatique de dépêches",
-          image: "image/SAE1.01.png",
-          description: "Nous avons du réaliser en groupe de deux un système capable de classer automatiquement des dépêches journalistiques dans cinq catégories (Sciences, Culture, Économie, Politique, Sport) en analysant leur contenu textuel. La première phase consistait à créer manuellement des lexiques de mots-clés représentatifs. La seconde phase reposait sur l’automatisation de cette génération via une méthode d’apprentissage supervisé. Un comparatif a été effectué avec l'algorithme des k plus proches voisins (K-NN). Pour finir, nous devions rédiger un document résumant ce que l'on avait fait en anglais ",
-          competences: "Réaliser un développement d’application : c'est-à-dire concevoir, coder, tester et intégrer une solution informatique pour un client.\n Optimiser des applications : Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressource...",
-          outils: ["image/Java.webp" , "image/word.webp"],
-          actions: "Je me suis occupé de réaliser l'automatiqation des de la classifications des dépeches ainsi que de la generation des scores pour chaque mots présent dans les dépeches. Cela m'a permit d'en apprendre plus sur le java ainsi que sur KNN que je ne connaissait que de nom. "
-        },
-        2: {
-          titre: "Installation d'un environnement de développement sous Debian 12",
-          image: "image/SAE1.03.png",
-          description: "J’ai du réaliser seul une installation complète d’un environnement de développement sur une machine virtuelle Debian 12 avec KDE/Plasma ainsi qu'une carte mentale representant les differente etape de cette instalation. L’objectif était d’installer et configurer plusieurs outils de développement (git, JDK, IntelliJ IDEA) en respectant une procédure précise. L’évaluation portait sur la bonne exécution des étapes techniques, la cohérence des captures, la maîtrise de l’environnement Linux et la traçabilité de l’installation. J’ai validé les installations via des captures d’écran nommées et ordonnées selon les consignes de l’enseignant.",
-          competences: "Administrer des systèmes informatiques communicants complexes : Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des infrastructures, des services et des réseaux et optimiser le système informatique d'une organisation.",
-          outils : ["image/debian-logo.png"],
-          actions: "Je me suis occupé de creer une machine virtuelle sous Debian 12, vérifier l’intégrité de l’image ISO, installer le système avec nom de login personnalisé, installer Git et JDK, installer IntelliJ IDEA de trois manières (archive, snap, flatpak), ainsi que de verifier si tout cela fonctionné et prendre des captures d'ecran pour le rendu. Cela m'a permit d'apprendre comment installer une machine virtuelle ainsi qu'un systeme d'exploitation Debian  "
-        },
-        3: {
-          titre: "Base de données – Club de bowling SuperBall",
-          image: "image/SAE1.04.png",
-          description: "Nous avons du concevoir par groupe de 2 une base de données relationnelle complète pour la gestion des réservations d’un club de bowling. Le système permet de gérer les réservations de pistes, l’emprunt de chaussures, les plages d’indisponibilité, et d’assurer le respect de nombreuses contraintes métier (disponibilité des équipements, horaires d’ouverture, validation des joueurs, etc.). Le travail a été organisé en trois étapes : modélisation (SEA ➝ SLR), scripts SQL (création, suppression, insertion, test) puis ajout de nouvelles fonctionnalités comme le remplacement de matériel et l’évolution des règles du jeu.",
-          competences: "Gérer des données de l’information :Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise ",
-          outils : ["image/sql.png", "image/word.webp"],
-          actions: "Je mes suis occupé de la création du schema relationnel, de la redaction de script SQL('Create.sql', 'drop.sql', 'test.sql'), de la formulation de requetes répondant à des besoins metiers, ainsi que de la gestion de cas évolutifs (piste dégradée, renouvellement de chaussures). Cela m'a permit d'apprendre à gerer une petite base de donnée en SQL."
-        },
-        4: {
-          titre: "Site web institutionnel pour Sopra Steria",
-          image: "image/SAE1.0506.png",
-          description: "Nous avons du réaliser en groupe de 3 la conception et l’implémentation d’un site web destiné à présenter une entreprise du secteur numérique à un public non spécialiste, en particulier des élèves de 3ᵉ en recherche de stage. L’objectif était de rendre accessibles des notions d’entreprise, de transition numérique et écologique, via un site sobre, clair et éco-conçu. Le projet s’est déroulé en plusieurs étapes : recueil et vulgarisation d’informations, élaboration d’une fiche synthèse, création de maquettes, développement du site web, puis présentation orale du travail final.",      
-          competences: "Conduire un projet : Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client, organiser et piloter un projet informatique avec des méthodes classiques ou agiles.\nCollaborer au sein d’une équipe informatique : Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.",
-          outils : ["image/HTML5.png", "image/CSS2.png", "image/word.webp"],
-          actions: "J'ai du rechercher et sélectioner des informations sur l’entreprise Sopra Steria, rédiger une fiche vulgarisée, créer une maquette du site, le développement de pages web en HTML/CSS ainsi que de prendre en compte les retours sur les maquettes, finalisation et enfin nous avons du réaliser une présentation orale du projet en groupe. Cela m'a permit d'apprendre a faire un site internet complet ainsi que ce n'est pas forcement simple de coder en groupe de plusiseurs personnes "
-        },
-        5: {
-          titre: "Installation d’un serveur Debian 12 avec Apache, PostgreSQL et PHP",
-          image: "image/SAE2.03.png",
-          description: "J'ai du réaliser seul l'installation d'un serveur Debian 12 minimal (sans interface graphique) dans une machine virtuelle Qemu/KVM. L’objectif était d’installer et configurer Apache, PostgreSQL et PHP, de rendre le serveur accessible depuis la machine hôte, et de rédiger un guide technique en anglais documentant toutes les étapes. Chaque installation était vérifiée via des captures d’écran, avec des vérifications précises sur les services actifs, les redirections réseau, la base PostgreSQL et les composants PHP. Un accent particulier était mis sur la rigueur, la reproductibilité de l'installation et la rédaction technique selon les standards professionnels.",
-          competences: "Administrer des systèmes informatiques communicants complexes : Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des infrastructures, des services et des réseaux et optimiser le système informatique d'une organisation.",
-          outils: ["image/debian-logo.png", "image/sql.png","image/word.webp"],
-          actions: "j'ai réaliser la création d’une machine virtuelle Debian, l'installation de logiciels serveur avec APT, configuration réseau, la création d’utilisateurs et de bases PostgreSQL, le test de connectivité locale et distante ainsi que la rédaction d’un guide en anglais structuré illustré par captures d’écran, le test de PhpPgAdmin, l'analyse basique de sécurité de l’installation. Cela m'a permit d'appronfondir mes connaissance sur debian et sur l'installation d'un serveur ainsi que mon anglais."
-        },
-        6: {
-          titre: "Analyse des données d'accidents de la route",
-          image: "image/SAE2.04.png",
-          description: "Nous avons du réaliser en groupe de 2 une analyse des bases de données officielles issues du fichier BAAC (Bulletin d’analyse des accidents corporels), recensant les accidents routiers survenus en France entre 2005 et 2023. Le projet visait à comprendre la structure de ces bases, effectuer des jointures entre les différentes tables (caractéristiques, lieux, véhicules, usagers) et réaliser des analyses statistiques en respectant la confidentialité des données personnelles. Nous devions réaliser une analyse sur les accident impliquant des cyclistes dans la région auvergne-Rhone-Alpes entre les années 2006 et 2023. Une fois les donnés extraite nous devions réaliser des graphiques de statistiques. ",
-          competences : "Gérer des données de l’information : Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.",
-          outils : ["image/sql.png", "image/R-logo.png"],
-          actions: "j'ai étudié le modèle de données BAAC, réaliser la conception de requêtes d’analyse, le traitement des données manquantes, la réalisation de croisements entre variables pour interprétation statistique. Cela m'a permit de vraiment apprendre à gere une base de données avec un certain nombre de donné car j'avais toujours travaillé sur des petites base de donnés."
-        },
-        7: {
-          titre: "Développement d’un outil d’aide à l’organisation d’événements",
-          image: "image-organisation-evenements.jpg",
-          description: "Nous devions en groupe de 6 concevoir et développer une application de bureau en Java, avec JavaFX et l’architecture MVC, permettant à un administrateur de gérer plusieurs événements (planification, intervenants, logistique, communication, etc.). Le projet comportait une forte composante de modélisation (diagrammes, dossiers fonctionnels), de travail collaboratif (gestion de projet en équipe via GitLab), et d’analyse mathématique (graphe d’ordonnancement, optimisation). L’évaluation comprenait une démonstration de l'application, un pitch en anglais et une présentation dans le cadre de la semaine marketing de l’innovation.",
-          competences: "Réaliser un développement d’application : Développer c'est-à-dire concevoir, coder, tester et intégrer une solution informatique pour un client.\nOptimiser des applications : Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressources…\nConduire un projet : Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client, organiser et piloter un projet informatique avec des méthodes classiques ou agiles\nCollaborer au sein d’une équipe informatique : Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique. ",
-          outils : ["image/java.webp", "image/Java-FX.png", "image/GitHub-Logo.png", "image/UML.png", "image/word.webp"],
-          actions: "J'ai du analyser des besoins fonctionnels, rédiger de la documentation (cadrage, modélisation), modelser une l’interface. Cela m'a permit de mieux gerer un travail en équipe ety voir comment travailler a plus."
-        }
+      1: {
+        titre: "Classification automatique de dépêches",
+        image: "image/SAE1.01.png",
+        description: "Nous avons dû réaliser en groupe de deux un système capable de classer automatiquement des dépêches journalistiques dans cinq catégories (Sciences, Culture, Économie, Politique, Sport) en analysant leur contenu textuel. La première phase consistait à créer manuellement des lexiques de mots-clés représentatifs. La seconde phase reposait sur l’automatisation de cette génération via une méthode d’apprentissage supervisé. Un comparatif a été effectué avec l'algorithme des k plus proches voisins (K-NN). Pour finir, nous devions rédiger un document résumant ce que nous avions fait en anglais.",
+        competences: "Réaliser un développement d’application : c'est-à-dire concevoir, coder, tester et intégrer une solution informatique pour un client. Optimiser des applications : proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressources...",
+        outils: ["image/Java.webp", "image/word.webp"],
+        actions: "Je me suis occupé de réaliser l'automatisation de la classification des dépêches ainsi que de la génération des scores pour chaque mot présent dans les dépêches. Cela m'a permis d'en apprendre plus sur Java ainsi que sur KNN, que je ne connaissais que de nom."
+      },
+      2: {
+        titre: "Installation d'un environnement de développement sous Debian 12",
+        image: "image/SAE1.03.png",
+        description: "J’ai dû réaliser seul une installation complète d’un environnement de développement sur une machine virtuelle Debian 12 avec KDE/Plasma ainsi qu'une carte mentale représentant les différentes étapes de cette installation. L’objectif était d’installer et configurer plusieurs outils de développement (git, JDK, IntelliJ IDEA) en respectant une procédure précise. L’évaluation portait sur la bonne exécution des étapes techniques, la cohérence des captures, la maîtrise de l’environnement Linux et la traçabilité de l’installation.",
+        competences: "Administrer des systèmes informatiques communicants complexes : installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des infrastructures, des services et des réseaux et optimiser le système informatique d'une organisation.",
+        outils: ["image/debian-logo.png"],
+        actions: "Je me suis occupé de créer une machine virtuelle sous Debian 12, de vérifier l’intégrité de l’image ISO, d’installer le système avec un nom de login personnalisé, d’installer Git et JDK, d’installer IntelliJ IDEA de trois manières (archive, snap, flatpak), ainsi que de vérifier si tout cela fonctionnait et de prendre des captures d’écran pour le rendu. Cela m'a permis d’apprendre comment installer une machine virtuelle ainsi qu’un système d’exploitation Debian."
+      },
+      3: {
+        titre: "Base de données – Club de bowling SuperBall",
+        image: "image/SAE1.04.png",
+        description: "Nous avons dû concevoir, par groupe de deux, une base de données relationnelle complète pour la gestion des réservations d’un club de bowling. Le système permet de gérer les réservations de pistes, l’emprunt de chaussures, les plages d’indisponibilité, et d’assurer le respect de nombreuses contraintes métier (disponibilité des équipements, horaires d’ouverture, validation des joueurs, etc.). Le travail a été organisé en trois étapes : modélisation (SEA ➝ SLR), scripts SQL (création, suppression, insertion, test), puis ajout de nouvelles fonctionnalités comme le remplacement de matériel et l’évolution des règles du jeu.",
+        competences: "Gérer des données de l’information : concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.",
+        outils: ["image/sql.png", "image/word.webp"],
+        actions: "Je me suis occupé de la création du schéma relationnel, de la rédaction de scripts SQL ('Create.sql', 'Drop.sql', 'Test.sql'), de la formulation de requêtes répondant à des besoins métier, ainsi que de la gestion de cas évolutifs (piste dégradée, renouvellement de chaussures). Cela m'a permis d’apprendre à gérer une petite base de données en SQL."
+      },
+      4: {
+        titre: "Site web institutionnel pour Sopra Steria",
+        image: "image/SAE1.0506.png",
+        description: "Nous avons dû réaliser, en groupe de 3, la conception et l’implémentation d’un site web destiné à présenter une entreprise du secteur numérique à un public non spécialiste, en particulier des élèves de 3ᵉ en recherche de stage. L’objectif était de rendre accessibles des notions d’entreprise, de transition numérique et écologique, via un site sobre, clair et éco-conçu.",
+        competences: "Conduire un projet : satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client, organiser et piloter un projet informatique avec des méthodes classiques ou agiles. Collaborer au sein d’une équipe informatique : acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique.",
+        outils: ["image/HTML5.png", "image/CSS2.png", "image/word.webp"],
+        actions: "J'ai dû rechercher et sélectionner des informations sur l’entreprise Sopra Steria, rédiger une fiche vulgarisée, créer une maquette du site, développer des pages web en HTML/CSS, prendre en compte les retours sur les maquettes et finaliser le projet. Nous avons ensuite réalisé une présentation orale du projet en groupe. Cela m'a permis d’apprendre à créer un site internet complet et de constater que travailler en groupe n’est pas toujours facile."
+      },
+      5: {
+        titre: "Installation d’un serveur Debian 12 avec Apache, PostgreSQL et PHP",
+        image: "image/SAE2.03.png",
+        description: "J'ai dû réaliser seul l'installation d'un serveur Debian 12 minimal (sans interface graphique) dans une machine virtuelle Qemu/KVM. L’objectif était d’installer et configurer Apache, PostgreSQL et PHP, de rendre le serveur accessible depuis la machine hôte, et de rédiger un guide technique en anglais documentant toutes les étapes.",
+        competences: "Administrer des systèmes informatiques communicants complexes : installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des infrastructures, des services et des réseaux, et optimiser le système informatique d'une organisation.",
+        outils: ["image/debian-logo.png", "image/sql.png", "image/word.webp"],
+        actions: "J'ai réalisé la création d’une machine virtuelle Debian, l'installation de logiciels serveur avec APT, la configuration réseau, la création d’utilisateurs et de bases PostgreSQL, les tests de connectivité locale et distante, ainsi que la rédaction d’un guide en anglais structuré, illustré par des captures d’écran. Cela m'a permis d’approfondir mes connaissances sur Debian, l’installation de serveurs, ainsi que sur la rédaction technique en anglais."
+      },
+      6: {
+        titre: "Analyse des données d'accidents de la route",
+        image: "image/SAE2.04.png",
+        description: "Nous avons dû réaliser, en groupe de deux, une analyse des bases de données officielles issues du fichier BAAC (Bulletin d’analyse des accidents corporels), recensant les accidents routiers survenus en France entre 2005 et 2023. Nous devions réaliser une analyse sur les accidents impliquant des cyclistes dans la région Auvergne-Rhône-Alpes entre 2006 et 2023.",
+        competences: "Gérer des données de l’information : concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.",
+        outils: ["image/sql.png", "image/R-logo.png"],
+        actions: "J'ai étudié le modèle de données BAAC, conçu des requêtes d’analyse, traité les données manquantes, et effectué des croisements entre variables pour interprétation statistique. Cela m'a permis d’apprendre à gérer une base de données volumineuse, ce que je n’avais encore jamais fait."
+      },
+      7: {
+        titre: "Développement d’un outil d’aide à l’organisation d’événements",
+        image: "image-organisation-evenements.jpg",
+        description: "Nous devions, en groupe de 6, concevoir et développer une application de bureau en Java avec JavaFX et l’architecture MVC, permettant à un administrateur de gérer plusieurs événements (planification, intervenants, logistique, communication, etc.).",
+        competences: "Réaliser un développement d’application : concevoir, coder, tester et intégrer une solution informatique pour un client. Optimiser des applications : proposer des applications informatiques optimisées. Conduire un projet : organiser et piloter un projet informatique. Collaborer au sein d’une équipe informatique.",
+        outils: ["image/java.webp", "image/Java-FX.png", "image/GitHub-Logo.png", "image/UML.png", "image/word.webp"],
+        actions: "J'ai dû analyser les besoins fonctionnels, rédiger la documentation (cadrage, modélisation), modéliser l’interface. Cela m'a permis d’améliorer mes compétences en travail d’équipe et de comprendre les enjeux d’un projet collaboratif."
       }
+    };
 
       const params = new URLSearchParams(window.location.search);
       const id = params.get('id');
