@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - MACAUD Mathieu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <button class="burger" aria-label="Menu">&#9776;</button>
+  <a class="home-icon" href="index.html" aria-label="Accueil">
+    MACAUD Mathieu
+  </a>
+  <nav class="nav-links">
+    <a href="index.html#a-propos">À propos</a>
+    <a href="Projet.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <label class="switch-dark" aria-label="Basculer le mode sombre">
+    <input type="checkbox" id="toggle-dark" aria-checked="false">
+    <span class="slider-dark"></span>
+  </label>
+</header>
+
+<div class="etudiant">
+  <h1>MACAUD Mathieu</h1>
+  <p>Étudiant en BUT Informatique</p>
+</div>
+
+
+
+<!-- Section À propos -->
+<main id="a-propos" class="a-propos-section">
+  <h1>MACAUD Mathieu</h1>
+  <h2>À propos</h2>
+  <div class="a-propos-content">
+    <div class="a-propos-image">
+      <img src="image/portrait.jpeg" alt="Portrait de Macaud Mathieu" />
+    </div>
+    <div class="a-propos-description">
+      <ul class="tab-menu">
+        <li class="selected_btn" data-target="tab-presentation">Présentation</li>
+        <li data-target="tab-langues">Langues</li>
+        <li data-target="tab-softskills">Soft skills</li>
+        <li data-target="tab-passions">Passions</li>
+      </ul>
+      <div id="tab-presentation" class="tab-content active">
+        <p>Étudiant en première année de BUT Informatique, passionné par le développement web et logiciel. Curieux, motivé et toujours prêt à apprendre de nouvelles technologies.</p>
+      </div>
+      <div id="tab-langues" class="tab-content">
+        <div>
+          <img src="image/france.webp" alt="Drapeau français">
+          <h3>Français</h3>
+          <p>Langue natale</p>
+        </div>
+        <div>
+          <img src="image/anglais.png" alt="Drapeau anglais">
+          <h3>Anglais</h3>
+          <p>Niveau B2</p>
+        </div>
+      </div>
+      <div id="tab-softskills" class="tab-content">
+        <ul>
+          <li>
+            <h3>Autonomie</h3>
+            <p>Je suis capable de travailler de manière autonome et de prendre des initiatives lorsque nécessaire.</p>
+          </li>
+          <li>
+            <h3>Esprit d’équipe</h3>
+            <p>Je sais collaborer efficacement avec les autres, notamment grâce à l'expérience acquise lors de mes deux années chez McDonald's.</p>
+          </li>
+          <li>
+            <h3>Curiosité</h3>
+            <p>J’aime apprendre et découvrir de nouvelles technologies ou approches.</p>
+          </li>
+        </ul>
+      </div>
+      <div id="tab-passions" class="tab-content">
+        <p>Formule 1, football, jeux vidéo. Ces passions m'inspirent et m'apprennent la persévérance, l'analyse et le goût du challenge.</p>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item"><div class="circle"></div><span class="date1">2024 - BUT Informatique</span></div>
+    <div class="timeline-item"><div class="circle"></div><span class="date2">Obtention du Baccalauréat - 2024</span></div>
+    <div class="timeline-item"><div class="circle"></div><span class="date3">2023 - Passage du permis de conduite</span></div>
+    <div class="timeline-item"><div class="circle"></div><span class="date4">Obtention du Brevet - 2021</span></div>
+  </div>
+  <section class="skills-categorized">
+    <h2>Compétences Techniques</h2>
+    <div class="skills-category">
+      <h3>Langages</h3>
+      <div class="skills-images">
+        <img src="image/HTML5.png" alt="HTML" />
+        <img src="image/CSS2.png" alt="CSS" />
+        <img src="image/Java.webp" alt="Java" />
+        <img src="image/Java-FX.png" alt="JavaFX" />
+        <img src="image/Python-logo-notext.png" alt="Python" />
+        <img src="image/sql.png" alt="SQL" />
+        <img src="image/assembleur.png" alt="Assembleur" />
+        <img src="image/R-logo.png" alt="R" />
+      </div>
+    </div>
+    <div class="skills-category">
+      <h3>Outils & Modélisation</h3>
+      <div class="skills-images">
+        <img src="image/GitHub-Logo.png" alt="GitHub" />
+        <img src="image/UML.png" alt="UML" />
+        <img src="image/drawIo.png" alt="Draw.io" />
+        <img src="image/word.webp" alt="Word" />
+      </div>
+    </div>
+    <div class="skills-category">
+      <h3>Systèmes</h3>
+      <div class="skills-images">
+        <img src="image/debian-logo.png" alt="Debian" />
+        <img src="image/linux.png" alt="Linux" />
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="footer" id="footer">
+  <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor" style="vertical-align:middle;"><path d="M18.146 18.146h-3.08v-5.569c0-1.328-.025-3.037-1.85-3.037-1.85 0-2.133 1.445-2.133 2.939v5.667h-3.08V7.5h2.958v1.453h.042c.412-.78 1.42-1.602 2.924-1.602 3.127 0 3.703 2.057 3.703 4.734v6.061zM5.337 6.047a1.785 1.785 0 1 1 0-3.57 1.785 1.785 0 0 1 0 3.57zm-1.54 12.099h3.08V7.5h-3.08v10.646zM19.615 0H.385A.385.385 0 0 0 0 .385v19.23c0 .213.172.385.385.385h19.23a.385.385 0 0 0 .385-.385V.385A.385.385 0 0 0 19.615 0z"/></svg>LinkedIn</a>
+  <a href="cv.pdf" download aria-label="Télécharger mon CV"><svg width="20" height="20" fill="currentColor" style="vertical-align:middle;"><path d="M5 20h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3V2.5A1.5 1.5 0 0 0 10.5 1h-1A1.5 1.5 0 0 0 8 2.5V6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2zm5-6a1 1 0 0 1-1-1V9.414l-1.293 1.293a1 1 0 0 1-1.414-1.414l3-3a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1-1.414 1.414L11 9.414V13a1 1 0 0 1-1 1z"/></svg>Télécharger mon CV</a>
+</div>
+<script src="script.js">
+  
+</script>
+
+</body>
+</html>

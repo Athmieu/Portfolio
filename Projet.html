@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <button class="burger" aria-label="Menu">&#9776;</button>
+    <a class="home-icon" href="index.html" aria-label="Accueil">
+      MACAUD Mathieu
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#a-propos">À propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <label class="switch-dark" aria-label="Basculer le mode sombre">
+      <input type="checkbox" id="toggle-dark" aria-checked="false">
+      <span class="slider-dark"></span>
+    </label>
+  </header>
+
+   <section class="intro-projets">
+    <h1>Mes Réalisations</h1>
+    <p>Une sélection de mes projets les plus marquants, mêlant développement, conception et innovation.</p>
+  </section>
+
+  <div class="projets-grid">
+    <a href="page-projet.html?id=1" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Classification de dépêches</h3>
+        <p>Apprentissage automatique – Python & NLP</p>
+      </div>
+    </a>
+
+    <a href="page-projet.html?id=2" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Environnement Debian 12</h3>
+        <p>Virtualisation & Configuration système</p>
+      </div>
+    </a>
+
+    <a href="page-projet.html?id=3" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Base de données SuperBall</h3>
+        <p>Modélisation SQL – Gestion de club</p>
+      </div>
+    </a>
+
+    <a href="page-projet.html?id=4" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Site Sopra Steria</h3>
+        <p>Développement front-end & accessibilité</p>
+      </div>
+    </a>
+
+    <a href="page-projet.html?id=5" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Serveur Debian complet</h3>
+        <p>Apache, PostgreSQL & PHP</p>
+      </div>
+    </a>
+
+    <a href="page-projet.html?id=6" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Analyse d’accidents routiers</h3>
+        <p>Data visualisation – Pandas & Matplotlib</p>
+      </div>
+    </a>
+
+    <a href="page-projet.html?id=7" class="projet-card fade-in">
+      <div class="projet-overlay"></div>
+      <div class="projet-content">
+        <h3>Outil d’organisation</h3>
+        <p>Web app collaborative en JavaScript</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="footer" id="footer">
+    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor" style="vertical-align:middle;"><path d="M18.146 18.146h-3.08v-5.569c0-1.328-.025-3.037-1.85-3.037-1.85 0-2.133 1.445-2.133 2.939v5.667h-3.08V7.5h2.958v1.453h.042c.412-.78 1.42-1.602 2.924-1.602 3.127 0 3.703 2.057 3.703 4.734v6.061zM5.337 6.047a1.785 1.785 0 1 1 0-3.57 1.785 1.785 0 0 1 0 3.57zm-1.54 12.099h3.08V7.5h-3.08v10.646zM19.615 0H.385A.385.385 0 0 0 0 .385v19.23c0 .213.172.385.385.385h19.23a.385.385 0 0 0 .385-.385V.385A.385.385 0 0 0 19.615 0z"/></svg>LinkedIn</a>
+    <a href="cv.pdf" download aria-label="Télécharger mon CV"><svg width="20" height="20" fill="currentColor" style="vertical-align:middle;"><path d="M5 20h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3V2.5A1.5 1.5 0 0 0 10.5 1h-1A1.5 1.5 0 0 0 8 2.5V6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2zm5-6a1 1 0 0 1-1-1V9.414l-1.293 1.293a1 1 0 0 1-1.414-1.414l3-3a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1-1.414 1.414L11 9.414V13a1 1 0 0 1-1 1z"/></svg>Télécharger mon CV</a>
+  </div>
+
+</body>
+</html>
