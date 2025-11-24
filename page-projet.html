@@ -57,13 +57,23 @@
   </div>
 
   <script>
-  </div>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (prefersDark && !savedTheme)) {
+        document.body.classList.add('dark');
+      }
+    })();
 
-  <script>
     document.addEventListener('DOMContentLoaded', function () {
       const burger = document.querySelector('.burger');
       const nav = document.querySelector('.nav-links');
-      burger.addEventListener('click', () => nav.classList.toggle('active'));
+      
+      burger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+          const isExpanded = nav.classList.contains('active');
+          burger.setAttribute('aria-expanded', isExpanded);
+      });
 
       const projets = {
       1: {
@@ -75,22 +85,6 @@
         actions: "Je me suis occupé de réaliser l'automatisation de la classification des dépêches ainsi que de la génération des scores pour chaque mot présent dans les dépêches. Cela m'a permis d'en apprendre plus sur Java ainsi que sur KNN, que je ne connaissais que de nom."
       },
       2: {
-        titre: "Installation d'un environnement de développement sous Debian 12",
-        image: "image/SAE1.03.png",
-        description: "J’ai dû réaliser seul une installation complète d’un environnement de développement sur une machine virtuelle Debian 12 avec KDE/Plasma ainsi qu'une carte mentale représentant les différentes étapes de cette installation. L’objectif était d’installer et configurer plusieurs outils de développement (git, JDK, IntelliJ IDEA) en respectant une procédure précise. L’évaluation portait sur la bonne exécution des étapes techniques, la cohérence des captures, la maîtrise de l’environnement Linux et la traçabilité de l’installation.",
-        competences: "Administrer des systèmes informatiques communicants complexes : installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des infrastructures, des services et des réseaux et optimiser le système informatique d'une organisation.",
-        outils: ["image/debian-logo.png"],
-        actions: "Je me suis occupé de créer une machine virtuelle sous Debian 12, de vérifier l’intégrité de l’image ISO, d’installer le système avec un nom de login personnalisé, d’installer Git et JDK, d’installer IntelliJ IDEA de trois manières (archive, snap, flatpak), ainsi que de vérifier si tout cela fonctionnait et de prendre des captures d’écran pour le rendu. Cela m'a permis d’apprendre comment installer une machine virtuelle ainsi qu’un système d’exploitation Debian."
-      },
-      3: {
-        titre: "Base de données – Club de bowling SuperBall",
-        image: "image/SAE1.04.png",
-        description: "Nous avons dû concevoir, par groupe de deux, une base de données relationnelle complète pour la gestion des réservations d’un club de bowling. Le système permet de gérer les réservations de pistes, l’emprunt de chaussures, les plages d’indisponibilité, et d’assurer le respect de nombreuses contraintes métier (disponibilité des équipements, horaires d’ouverture, validation des joueurs, etc.). Le travail a été organisé en trois étapes : modélisation (SEA ➝ SLR), scripts SQL (création, suppression, insertion, test), puis ajout de nouvelles fonctionnalités comme le remplacement de matériel et l’évolution des règles du jeu.",
-        competences: "Gérer des données de l’information : concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.",
-        outils: ["image/sql.png", "image/word.webp"],
-        actions: "Je me suis occupé de la création du schéma relationnel, de la rédaction de scripts SQL ('Create.sql', 'Drop.sql', 'Test.sql'), de la formulation de requêtes répondant à des besoins métier, ainsi que de la gestion de cas évolutifs (piste dégradée, renouvellement de chaussures). Cela m'a permis d’apprendre à gérer une petite base de données en SQL."
-      },
-      4: {
         titre: "Site web institutionnel pour Sopra Steria",
         image: "image/SAE1.0506.png",
         description: "Nous avons dû réaliser, en groupe de 3, la conception et l’implémentation d’un site web destiné à présenter une entreprise du secteur numérique à un public non spécialiste, en particulier des élèves de 3ᵉ en recherche de stage. L’objectif était de rendre accessibles des notions d’entreprise, de transition numérique et écologique, via un site sobre, clair et éco-conçu.",
@@ -98,7 +92,7 @@
         outils: ["image/HTML5.png", "image/CSS2.png", "image/word.webp"],
         actions: "J'ai dû rechercher et sélectionner des informations sur l’entreprise Sopra Steria, rédiger une fiche vulgarisée, créer une maquette du site, développer des pages web en HTML/CSS, prendre en compte les retours sur les maquettes et finaliser le projet. Nous avons ensuite réalisé une présentation orale du projet en groupe. Cela m'a permis d’apprendre à créer un site internet complet et de constater que travailler en groupe n’est pas toujours facile."
       },
-      5: {
+      3: {
         titre: "Installation d’un serveur Debian 12 avec Apache, PostgreSQL et PHP",
         image: "image/SAE2.03.png",
         description: "J'ai dû réaliser seul l'installation d'un serveur Debian 12 minimal (sans interface graphique) dans une machine virtuelle Qemu/KVM. L’objectif était d’installer et configurer Apache, PostgreSQL et PHP, de rendre le serveur accessible depuis la machine hôte, et de rédiger un guide technique en anglais documentant toutes les étapes.",
@@ -106,22 +100,23 @@
         outils: ["image/debian-logo.png", "image/sql.png", "image/word.webp"],
         actions: "J'ai réalisé la création d’une machine virtuelle Debian, l'installation de logiciels serveur avec APT, la configuration réseau, la création d’utilisateurs et de bases PostgreSQL, les tests de connectivité locale et distante, ainsi que la rédaction d’un guide en anglais structuré, illustré par des captures d’écran. Cela m'a permis d’approfondir mes connaissances sur Debian, l’installation de serveurs, ainsi que sur la rédaction technique en anglais."
       },
-      6: {
-        titre: "Analyse des données d'accidents de la route",
-        image: "image/SAE2.04.png",
-        description: "Nous avons dû réaliser, en groupe de deux, une analyse des bases de données officielles issues du fichier BAAC (Bulletin d’analyse des accidents corporels), recensant les accidents routiers survenus en France entre 2005 et 2023. Nous devions réaliser une analyse sur les accidents impliquant des cyclistes dans la région Auvergne-Rhône-Alpes entre 2006 et 2023.",
-        competences: "Gérer des données de l’information : concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise.",
-        outils: ["image/sql.png", "image/R-logo.png"],
-        actions: "J'ai étudié le modèle de données BAAC, conçu des requêtes d’analyse, traité les données manquantes, et effectué des croisements entre variables pour interprétation statistique. Cela m'a permis d’apprendre à gérer une base de données volumineuse, ce que je n’avais encore jamais fait."
-      },
-      7: {
+      4: {
         titre: "Développement d’un outil d’aide à l’organisation d’événements",
         image: "image-organisation-evenements.jpg",
         description: "Nous devions, en groupe de 6, concevoir et développer une application de bureau en Java avec JavaFX et l’architecture MVC, permettant à un administrateur de gérer plusieurs événements (planification, intervenants, logistique, communication, etc.).",
         competences: "Réaliser un développement d’application : concevoir, coder, tester et intégrer une solution informatique pour un client. Optimiser des applications : proposer des applications informatiques optimisées. Conduire un projet : organiser et piloter un projet informatique. Collaborer au sein d’une équipe informatique.",
         outils: ["image/java.webp", "image/Java-FX.png", "image/GitHub-Logo.png", "image/UML.png", "image/word.webp"],
         actions: "J'ai dû analyser les besoins fonctionnels, rédiger la documentation (cadrage, modélisation), modéliser l’interface. Cela m'a permis d’améliorer mes compétences en travail d’équipe et de comprendre les enjeux d’un projet collaboratif."
-      }
+      },
+      5: { 
+        titre: "Jeu de Mémoire (Memory Game)",
+        image: "image/Memory-game.png",
+        description: "Réalisation d'un jeu de mémoire complet en utilisant HTML, CSS et JavaScript. Le projet consistait à créer une interface interactive avec une grille de cartes. L'objectif était d'implémenter la logique de jeu, y compris le mélange aléatoire, la gestion des clics, le contrôle des paires trouvées, le comptage des essais, et l'affichage d'un message de victoire.",
+        competences: "Réaliser un développement d’application : Concevoir, coder et tester une solution front-end interactive. Développer des applications web : Maîtriser les technologies client (HTML, CSS, JavaScript) pour créer des interfaces dynamiques.",
+        outils: ["image/HTML5.png", "image/CSS2.png", "image/Java-script.png"],
+        actions: "J'ai géré l'ensemble du développement : structure HTML, style CSS responsive, et surtout la logique JavaScript complexe (fonctions de mélange, gestion des états des cartes, temporisation des retours, et boucle de jeu).",
+        lien: "https://athmieu.github.io/Memory-Game"
+        } 
     };
 
       const params = new URLSearchParams(window.location.search);
@@ -131,43 +126,51 @@
         const projet = projets[id];
         document.getElementById('projet-titre').textContent = projet.titre;
         document.getElementById('projet-image').src = projet.image;
-        document.getElementById('projet-image').alt = projet.titre;
-        document.getElementById('description').textContent = projet.description;
+        document.getElementById('projet-image').alt = `Image illustrant le projet : ${projet.titre}`;
+        
+        const descEl = document.getElementById('description');
+        if (descEl) {
+            let descriptionContent = projet.description;
+            if (projet.lien) {
+                descriptionContent += `<br><br><a href="${projet.lien}" target="_blank" class="projet-lien-inline">▶ Voir le projet</a>`;
+            }
+            descEl.innerHTML = descriptionContent; 
+        }
+
         document.getElementById('competences').textContent = projet.competences;
         document.getElementById('actions').textContent = projet.actions;
 
-        // Ajout image outils
-      const outilsEl = document.getElementById('outils');
-      outilsEl.innerHTML = ""; // Vide l'ancien contenu
+        const outilsEl = document.getElementById('outils');
+        outilsEl.innerHTML = "";
 
       if (Array.isArray(projet.outils) && projet.outils.length > 0) {
         projet.outils.forEach(src => {
           const img = document.createElement("img");
           img.src = src;
-          img.alt = "Outil utilisé";
+          const fileName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+          img.alt = `Logo de l'outil ${fileName}`; 
           img.style.maxWidth = "120px";
           img.style.marginRight = "40px";
           outilsEl.appendChild(img);
         });
       } else {
           outilsEl.textContent = "Aucun outil renseigné.";
-}
+      }
 
       } else {
         document.getElementById('projet-titre').textContent = "Projet non trouvé";
         document.getElementById('projet-image').style.display = 'none';
-        document.getElementById('description').textContent = "";
-        document.getElementById('competences').textContent = "";
-        document.getElementById('actions').textContent = "";
-        document.getElementById('outils').style.display = 'none';
+        document.getElementById('description').textContent = "L'identifiant du projet n'est pas valide ou manquant.";
+        document.getElementById('competences').textContent = "Non applicable.";
+        document.getElementById('actions').textContent = "Non applicable.";
+        const outilsEl = document.getElementById('outils');
+        outilsEl.textContent = "";
+        outilsEl.classList.add('hidden');
       }
 
-      // Mode sombre
       const darkBtn = document.getElementById('toggle-dark');
-      if (localStorage.getItem('theme') === 'dark' || (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
-        darkBtn.checked = true;
-        document.body.classList.add('dark');
-      }
+      darkBtn.checked = document.body.classList.contains('dark');
+
       darkBtn.addEventListener('change', function() {
         if (darkBtn.checked) {
           document.body.classList.add('dark');

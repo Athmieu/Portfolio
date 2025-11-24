@@ -478,7 +478,7 @@ input:checked + .slider-dark:before {
 .projets-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px; 
+  gap: 80px; 
   padding: 60px 10%;
   background: #fff;
 }
@@ -615,6 +615,33 @@ input:checked + .slider-dark:before {
 
 .outils-images img:hover {
   transform: scale(1.1);
+}
+
+/* Style du lien dans la description pour la page projet */
+a.projet-lien-inline {
+  display: inline-block;
+  color: #0077b6 !important; /* Couleur principale */
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #0077b6; /* Soulignement pour attirer l'attention */
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+a.projet-lien-inline:hover {
+  color: #0096c7 !important;
+  border-bottom-color: #0096c7;
+}
+
+/* Adaptation au mode sombre */
+body.dark a.projet-lien-inline {
+  color: #00b4d8 !important;
+  border-bottom-color: #00b4d8;
+}
+
+body.dark a.projet-lien-inline:hover {
+  color: #00c4e4 !important;
+  border-bottom-color: #00c4e4;
 }
 
 /* ========================================
