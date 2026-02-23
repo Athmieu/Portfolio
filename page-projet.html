@@ -114,15 +114,24 @@
         description: "Réalisation d'un jeu de mémoire complet en utilisant HTML, CSS et JavaScript. Le projet consistait à créer une interface interactive avec une grille de cartes. L'objectif était d'implémenter la logique de jeu, y compris le mélange aléatoire, la gestion des clics, le contrôle des paires trouvées, le comptage des essais, et l'affichage d'un message de victoire.",
         competences: "Réaliser un développement d’application : Concevoir, coder et tester une solution front-end interactive. Développer des applications web : Maîtriser les technologies client (HTML, CSS, JavaScript) pour créer des interfaces dynamiques.",
         outils: ["image/HTML5.png", "image/CSS2.png", "image/Java-script.png"],
-        actions: "J'ai géré l'ensemble du développement : structure HTML, style CSS responsive, et surtout la logique JavaScript complexe (fonctions de mélange, gestion des états des cartes, temporisation des retours, et boucle de jeu).",
+        actions: "J'ai géré l'ensemble du développement : structure HTML, style CSS responsive, et surtout la logique JavaScript (fonctions de mélange, gestion des états des cartes, temporisation des retours, et boucle de jeu).",
         lien: "https://athmieu.github.io/Memory-Game"
+        },
+        6: { 
+        titre: "Développement d'une appllication web pour aidant de personne en situation de perte d'autonomie (GIR)",
+        image: "image/serena.png",
+        description: "Nous devions, en groupe de six, réaliser une application web pour simplifier l'aide aux personnes en situation de perte d'autonomie (GIR). Pour cela, nous avons réalisé une application permettant : la centralisation de données (telles que des documents), une recherche d'aide via un questionnaire adapté aux différentes situations, ainsi qu'un système de planning offrant la possibilité d'ajouter des trajets en sollicitant tous les membres de la famille. Nous avons également intégré un système de groupes avec différents rôles pour limiter l'accès aux données sensibles, la possibilité d'ajouter des rapports de visite, ainsi qu'un gestionnaire de stock de médicaments mettant à jour les quantités en fonction des rapports créés ou des modifications effectuées. Tout au long du projet. nous avions différets rendu de conception à faire contenant : la maquette, le diagramme de classe, le SEA/SLR.",
+        competences: "Réaliser un développement d’application, Optimiser des applications, Administrer des systèmes informatiques communicants complexes, Gérer des données de l’information, Conduire un projet,  Collaborer au sein d’une équipe informatique",
+        outils: ["image/PHP-logo.svg.png", "image/docker.svg", "image/React-icon.svg.png", "image/sql.png", "image/Github-Logo.png"],
+        actions: "Pendant ce projet, j'ai dû réaliser différentes fonctionnalités telles que : la création de comptes, la création de groupes et leur affichage, la rédaction de rapports de visite, l'ajout de documents (en limitant les types de fichiers et leur taille), l'ajout de trajets à un événement, ainsi que l'affichage des aides proposées en fonction des réponses au questionnaire.",
+        lien: "https://sere-na.alwaysdata.net/"
         } 
     };
 
       const params = new URLSearchParams(window.location.search);
       const id = params.get('id');
 
-      if (id && projets[id]) {
+      if (id && projets[id]) { 
         const projet = projets[id];
         document.getElementById('projet-titre').textContent = projet.titre;
         document.getElementById('projet-image').src = projet.image;
